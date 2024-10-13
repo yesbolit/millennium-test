@@ -1,13 +1,7 @@
 <?php declare(strict_types=1);
 
+require './debug.php';
 require './PDOConnection.php';
-
-function dd($var): void {
-    echo '<pre>';
-    print_r($var);
-    echo '<pre>';
-    die;
-}
 
 function parseClientId(string $clientIdsFromQuery): array {
     $clientIds = explode(',', $clientIdsFromQuery);
@@ -15,7 +9,6 @@ function parseClientId(string $clientIdsFromQuery): array {
         return array_map('intval', $clientIds);
     }
     return [];
-
 }
 
 function getClientOrders(array $clients): array {

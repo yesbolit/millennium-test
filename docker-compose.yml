@@ -6,7 +6,7 @@ services:
             - '.:/application'
         environment:
             - MYSQL_ROOT_PASSWORD=someRootPassword123
-            - MYSQL_DATABASE=app
+            - MYSQL_DATABASE=millennium
             - MYSQL_USER=app
             - MYSQL_PASSWORD=someUserPassword123
         ports:
